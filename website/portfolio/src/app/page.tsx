@@ -4,8 +4,8 @@ import Image from 'next/image'
 
 export function Parimg() {
     return (
-        <div className = "flex w-2/3 align-center bg-blue-300">
-            <p className="flex-auto w-2/3 bg-orange-300 text-center">Home</p>
+        <div className = "flex w-1/1 align-center bg-blue-300">
+            <p className="flex-auto w-2/3 bg-orange-300 text-center text-4xl">Home</p>
             <Image className="flex-auto w-1/3 rounded-full object-cover" // aspect-square
             width = {1}
             height = {1}
