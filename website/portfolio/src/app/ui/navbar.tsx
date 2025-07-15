@@ -7,9 +7,7 @@ export default function SideNav() {
         <NavTitle/>
       <div className="flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2">
         <NavLinks />
-        <div className="hidden h-auto w-full grow rounded-md bg-blue-400 md:block"></div>
-        <form>
-        </form>
+        <div className="hidden h-auto w-full grow md:block"></div>
       </div>
     </div>
   );
