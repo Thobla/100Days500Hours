@@ -63,7 +63,7 @@ function SubLinks(props: {parentPath : string}) {
         return(<></>)
     }
     return (
-        <ul key={props.parentPath} className={clsx('ml-[10%]',
+        <ul key={props.parentPath} className={clsx('text-center md:ml-[10%] md:text-left',
                                                    {'hidden' : getSubpaths(pathname).indexOf(props.parentPath) === -1})}
         >
         {subDirs.map((subTitle: string) => {
@@ -101,7 +101,7 @@ export function NavLinks() {
                                     {'bg-sky-200 text-blue-800': pathname === link.href,},
                     )}
                 >
-                    <p>{link.name}</p>
+                    <p className="text-center md:text-left">{link.name}</p>
                 </Link>
                 <SubLinks parentPath={link.href}/>
             </div>
@@ -116,7 +116,7 @@ export function NavTitle() {
     const val = refToTitle[pathname];
       return(
         <div
-        className="mb-2 flex items-end justify-start bg-blue-600 p-8"
+        className="mb-2 flex items-end justify-center bg-blue-600 p-8 md:justify-start"
       >
         <div className="w-32 text-white text-center md:w-40">
             <h1>{val}</h1>
