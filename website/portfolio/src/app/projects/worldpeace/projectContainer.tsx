@@ -16,12 +16,21 @@ export interface ProjectType {
     gameJam: boolean
 }
 
+export enum Status {
+    inProgress = "In Progress",
+    Discontinued = "Discontinued",
+    Finished = "Finished"
+}
+
 export interface ProjectInfo {
     id: number,
     name: string,
     type: PTypes[],
     date?: string,
-    github?: string
+    github?: string,
+    status?: Status,
+    image?: string,
+    gif?: string
 }
 
 
@@ -38,19 +47,19 @@ export const projects : Array<number> = [1, 2, 3, 4, 5];
 
 
 export const projectInfo : Map<number, ProjectInfo> = new Map<number, ProjectInfo>([
-    [1, {id:1, name:'PondusPanda', type:[PTypes.sparetime, PTypes.game], github:"Thobla/ShotgunPanda", date:"someDate"}],
-    [2, {id:2, name:'JordenSindre', type:[PTypes.sparetime, PTypes.game, PTypes.gameJam], github: "404-Game-Not-Found/JordenSindreGJH2024"}],
-    [3, {id:3, name:'CorruptedChess', type:[PTypes.school, PTypes.game]}],
+    [1, {id:1, name:'PondusPanda', type:[PTypes.sparetime, PTypes.game], github:"Thobla/ShotgunPanda", date:"someDate", status: Status.Discontinued, image: "/apple.png", gif: "/apple.gif"}],
+    [2, {id:2, name:'JordenSindre', type:[PTypes.sparetime, PTypes.game, PTypes.gameJam], github: "404-Game-Not-Found/JordenSindreGJH2024", status: Status.Finished, image: "/fish.png", gif: "/fish.gif"}],
+    [3, {id:3, name:'CorruptedChess', type:[PTypes.school, PTypes.game], status: Status.inProgress, image: "/sircus.png", gif: "/sircus.gif"}],
     [4, {id:4, name:'Thorgal.no', type:[PTypes.sparetime]}],
     [5, {id:5, name:'Turbo', type:[PTypes.sparetime, PTypes.game, PTypes.gameJam]}]
 ])
 
 export function ProjectContainer(props: { size: number, 
                                         boxVis: Map<number, boolean>}){
-    const [selected, setSelected] = useState(Math.min(... projects));
+    const [selected, setSelected] = useState(-1);
     return(
         <div className="flex justify-center">
-            <div className="flex flex-row content-start gap-x-[5%] w-full">
+            <div className="flex flex-row flex-wrap content-start w-full">
                 {projects.map((p_id: number) => {return(
                     <ProjectBox id={p_id} key={p_id} boxVis={props.boxVis} 
                     selected={selected} setSelected={setSelected}/>
@@ -58,6 +67,14 @@ export function ProjectContainer(props: { size: number,
                 })}
             </div>
         </div>
+    )
+}
+
+export async function GitHub(){
+    const data = await fetch('https://github.com/Thobla/1-Hour-Learning-Projects/blob/main/README.md');
+    const posts = data.text();
+    return(
+        <p>{posts}</p>
     )
 }
 //        <Image className="object-cover"
