@@ -15,12 +15,14 @@ export function FilterContainer(props: {bStates: Map<number, boolean>,
                                 boxVis: Map<number, boolean>,
                                 bStatesFun: ButtonFunction}){
     return(
-        nameTypeTuples.map((data) => {
+        <div>
+        {nameTypeTuples.map((data) => {
             let [name, id] = data;
             return(
                 <FilterButton key={id} name={name} PType={id} bStates={props.bStates} bStatesFun={props.bStatesFun} boxVis={props.boxVis} setBoxVis={props.setBoxVis}/>
             )
-        })
+        })}
+        </div>
     )
 }
 

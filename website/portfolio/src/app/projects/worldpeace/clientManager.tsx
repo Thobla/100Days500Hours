@@ -31,19 +31,11 @@ export function initBoxVis(buttonStates: Map<number, boolean>, info: Map<number,
 export default function ClientPage(){
     const [buttonStates, setButtonStates] = useState<Map<number, boolean>>(initButtonStates())
     const [boxVis, setBoxVis] = useState<Map<number, boolean>>(initBoxVis(buttonStates, projectInfo))
-    console.log(boxVis.get(1));
-    console.log(boxVis.get(2));
-    console.log(boxVis.get(3));
-    console.log(boxVis.get(4));
-    console.log(boxVis.get(5));
-    const [clicked, setClicked]: [boolean, Function] =  useState(false);
     function onClick(id: number){
-        console.log("here", buttonStates.get(id));
         const newBStates = new Map(buttonStates);
         newBStates.set(id, !buttonStates.get(id))
         setButtonStates(newBStates);
     }
-    console.log("boxVis client: ", boxVis)
     return(
         <>
         <FilterContainer bStates={buttonStates} bStatesFun={onClick} setBoxVis={setBoxVis} boxVis={boxVis}/>

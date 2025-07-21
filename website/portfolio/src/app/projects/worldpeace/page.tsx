@@ -5,7 +5,7 @@ import ClientPage from './clientManager';
 export default function Page(){
     return(
         <>
-        <div className="flex flex-wrap justify-center gap-y-5 my-8">
+        <div className="flex flex-wrap flex-col justify-center gap-y-5 my-8">
         <ClientPage/>
         </div>
         </>

@@ -1,6 +1,6 @@
 'use state'
 import ProjectBox from './projectBox';
-import useState from 'react';
+import { useState } from 'react';
 
 export enum PTypes {
     school = 1,
@@ -46,12 +46,13 @@ export const projectInfo : Map<number, ProjectInfo> = new Map<number, ProjectInf
 
 export function ProjectContainer(props: { size: number, 
                                         boxVis: Map<number, boolean>}){
-    console.log("boxVis project container: ", props.boxVis)
+    const [selected, setSelected] = useState(Math.min(... projects));
     return(
         <div className="flex justify-center">
             <div className="flex flex-row content-start gap-x-[5%] w-full">
                 {projects.map((p_id: number) => {return(
-                    <ProjectBox id={p_id} key={p_id} boxVis={props.boxVis}/>
+                    <ProjectBox id={p_id} key={p_id} boxVis={props.boxVis} 
+                    selected={selected} setSelected={setSelected}/>
                 );
                 })}
             </div>
