@@ -20,9 +20,10 @@ export interface ProjectInfo {
     id: number,
     name: string,
     type: PTypes[],
-//    github: string
-
+    date?: string,
+    github?: string
 }
+
 
 //function createProjectType(includedList:PTypes[]): ProjectType{
 //    return {
@@ -37,8 +38,8 @@ export const projects : Array<number> = [1, 2, 3, 4, 5];
 
 
 export const projectInfo : Map<number, ProjectInfo> = new Map<number, ProjectInfo>([
-    [1, {id:1, name:'PondusPanda', type:[PTypes.sparetime, PTypes.game]}],
-    [2, {id:2, name:'JordenSindre', type:[PTypes.sparetime, PTypes.game, PTypes.gameJam]}],
+    [1, {id:1, name:'PondusPanda', type:[PTypes.sparetime, PTypes.game], github:"Thobla/ShotgunPanda", date:"someDate"}],
+    [2, {id:2, name:'JordenSindre', type:[PTypes.sparetime, PTypes.game, PTypes.gameJam], github: "404-Game-Not-Found/JordenSindreGJH2024"}],
     [3, {id:3, name:'CorruptedChess', type:[PTypes.school, PTypes.game]}],
     [4, {id:4, name:'Thorgal.no', type:[PTypes.sparetime]}],
     [5, {id:5, name:'Turbo', type:[PTypes.sparetime, PTypes.game, PTypes.gameJam]}]
