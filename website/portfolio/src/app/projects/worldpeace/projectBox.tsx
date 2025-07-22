@@ -1,21 +1,20 @@
 'use client'
 import Image from 'next/image';
-import { useState } from 'react';
-import { ProjectInfo, projectInfo, projects, Status } from './projectContainer';
+import { projectInfo, Status } from './projectContainer';
 import clsx from 'clsx'
 
 
 export default function ProjectBox(props : {id: number, 
                                    boxVis: Map<number, boolean>,
                                    selected: number, 
-                                   setSelected: Function}){
+                                   setSelected: (p1: number) => void}){
 //    const [leftIdx, setLeftIdx] = useState();
     function onclick(){
-        if (props.selected === -1){
-            props.setSelected(props.id);
+        if (props.selected === props.id){
+            props.setSelected(-1);
         }
         else{
-            props.setSelected(-1);
+            props.setSelected(props.id);
         }
     }
     return(

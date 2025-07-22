@@ -47,7 +47,7 @@ const subtitleToRef : {[key: string] : string} = {
 }
 
 function getSubpaths(path: string): string[]{
-    var paths = path.split('/');
+    const paths = path.split('/');
     paths[0] = "/"
     for (let i : number = 1; i < paths.length; i++){
         paths[i] = i === 1 ? paths[0] + paths[1] : paths[i-1] + '/' + paths[i];

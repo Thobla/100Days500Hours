@@ -1,6 +1,3 @@
-import Image from 'next/image'
-import { FilterButton } from './projectFilter';
-import { ProjectContainer }  from './projectContainer';
 import ClientPage from './clientManager';
 import GitHub from './gitHub';
 export default function Page(){

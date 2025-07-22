@@ -70,13 +70,6 @@ export function ProjectContainer(props: { size: number,
     )
 }
 
-export async function GitHub(){
-    const data = await fetch('https://github.com/Thobla/1-Hour-Learning-Projects/blob/main/README.md');
-    const posts = data.text();
-    return(
-        <p>{posts}</p>
-    )
-}
 //        <Image className="object-cover"
 //        src="/example.gif"
 //        width={500}

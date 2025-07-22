@@ -1,21 +1,20 @@
 'use client'
-import ProjectBox from './projectBox';
-import { projectInfo, projects, ProjectInfo, ProjectContainer, ProjectType, PTypes } from './projectContainer';
-import { FilterButton, FilterContainer} from './projectFilter';
+import { projectInfo, projects, ProjectInfo, ProjectContainer, PTypes } from './projectContainer';
+import { FilterContainer} from './projectFilter';
 import { useState } from 'react';
 
 export type ButtonFunction = (p1: number) => void;
 
 function initButtonStates(){
-    var bStates: Map<number, boolean> = new Map<number, boolean>();
+    const bStates: Map<number, boolean> = new Map<number, boolean>();
     Object.values(PTypes).forEach((val) => bStates.set(Number(val), true));
     return bStates
 }
 
 export function initBoxVis(buttonStates: Map<number, boolean>, info: Map<number, ProjectInfo>): Map<number, boolean>{
-    var boxVis: Map<number, boolean> = new Map<number, boolean>();
+    const boxVis: Map<number, boolean> = new Map<number, boolean>();
     projects.forEach((id) => {
-        let projectInfo = info.get(id);
+        const projectInfo = info.get(id);
         boxVis.set(id, false);
         if (projectInfo){
             projectInfo.type.forEach((elem) => {

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 
-export function Parimg() {
+function Parimg() {
     const mytest = "test";
     return (
         <div className = "flex w-1/1 align-center bg-blue-300">

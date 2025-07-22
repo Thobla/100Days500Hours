@@ -11,13 +11,13 @@ const nameTypeTuples: ButtonTuple[] = [["school", 1], ["sparetime", 2], ["game",
 
 
 export function FilterContainer(props: {bStates: Map<number, boolean>, 
-                                setBoxVis: Function,
+                                setBoxVis: (p1: Map<number, boolean>) => void,
                                 boxVis: Map<number, boolean>,
                                 bStatesFun: ButtonFunction}){
     return(
         <div>
         {nameTypeTuples.map((data) => {
-            let [name, id] = data;
+            const [name, id] = data;
             return(
                 <FilterButton key={id} name={name} PType={id} bStates={props.bStates} bStatesFun={props.bStatesFun} boxVis={props.boxVis} setBoxVis={props.setBoxVis}/>
             )
@@ -30,7 +30,7 @@ export function FilterContainer(props: {bStates: Map<number, boolean>,
 export function FilterButton(props: {name: string, 
                              PType: number, 
                              bStates: Map<number, boolean>, 
-                             setBoxVis: Function,
+                             setBoxVis: (p1: Map<number, boolean>) => void;//Function,
                              boxVis: Map<number, boolean>,
                              bStatesFun: ButtonFunction}){
 
@@ -39,7 +39,7 @@ export function FilterButton(props: {name: string,
    useEffect(() => {
         const newBoxVis = initBoxVis(props.bStates, projectInfo);
         props.setBoxVis(newBoxVis);
-    }, [props.bStates]); // Dependency on button states
+    }, [props]); // Dependency on button states
 
     function handleClick(){
 
