@@ -1,4 +1,5 @@
 'use client'
+
 import { useState, useEffect } from 'react';
 import { ButtonFunction, initBoxVis} from './clientManager';
 import { projectInfo } from './projectContainer';
@@ -39,7 +40,7 @@ export function FilterButton(props: {name: string,
    useEffect(() => {
         const newBoxVis = initBoxVis(props.bStates, projectInfo);
         props.setBoxVis(newBoxVis);
-    }, [props]); // Dependency on button states
+    }, [props.bStates]); // Dependency on button states
 
     function handleClick(){
 

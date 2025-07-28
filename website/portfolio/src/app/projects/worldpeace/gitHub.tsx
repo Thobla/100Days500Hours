@@ -1,16 +1,16 @@
-import { remark } from 'remark';
-import html from 'remark-html';
-import styles from "@/app/markdown.module.css";
+'use client'
+import styles from '@/app/markdown.module.css';
+import { useEffect, useState } from 'react';
 
-export default async function GitHub(){
-    const data = await fetch('https://raw.githubusercontent.com/Thobla/Star-Shooter/main/README.md');
-    const markdown = await data.text();
-    const processedContent = await remark()
-    .use(html)
-    .process(markdown)
+
+export default function GitHub(props: {selected: number, 
+                                             markdowns: Map<number, string | TrustedHTML>}){
+    const [htmlContent, setHtmlContent] = useState<string | TrustedHTML>(""); 
+    useEffect(() => {
+        setHtmlContent(props.markdowns.get(props.selected) ?? "");
+    }, [props.selected]
+    )
     return(
-        <div className={styles.markdown} dangerouslySetInnerHTML={{__html: processedContent.toString() }}/>
+        <div className={styles.markdown} dangerouslySetInnerHTML={{__html: htmlContent }}/>
     )
 }
-
-

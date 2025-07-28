@@ -2,6 +2,7 @@
 import { projectInfo, projects, ProjectInfo, ProjectContainer, PTypes } from './projectContainer';
 import { FilterContainer} from './projectFilter';
 import { useState } from 'react';
+import GitHub from './gitHub';
 
 export type ButtonFunction = (p1: number) => void;
 
@@ -27,9 +28,10 @@ export function initBoxVis(buttonStates: Map<number, boolean>, info: Map<number,
 }
 
 
-export default function ClientPage(){
+export default function ClientPage(props: {markdowns: Map<number, string | TrustedHTML>}){
     const [buttonStates, setButtonStates] = useState<Map<number, boolean>>(initButtonStates())
     const [boxVis, setBoxVis] = useState<Map<number, boolean>>(initBoxVis(buttonStates, projectInfo))
+    const [selected, setSelected] = useState(-1);
     function onClick(id: number){
         const newBStates = new Map(buttonStates);
         newBStates.set(id, !buttonStates.get(id))
@@ -38,7 +40,8 @@ export default function ClientPage(){
     return(
         <>
         <FilterContainer bStates={buttonStates} bStatesFun={onClick} setBoxVis={setBoxVis} boxVis={boxVis}/>
-        <ProjectContainer size={3} boxVis={boxVis}/>
+        <ProjectContainer size={3} boxVis={boxVis} selected={selected} setSelected={setSelected}/>
+        <GitHub selected={selected} markdowns={props.markdowns}/>
         </>
     )
 }
