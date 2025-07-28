@@ -49,9 +49,9 @@ export const projects : Array<number> = [1, 2, 3, 4, 5];
 export const projectInfo : Map<number, ProjectInfo> = new Map<number, ProjectInfo>([
     [1, {id:1, name:'PondusPanda', type:[PTypes.sparetime, PTypes.game], github:"Thobla/ShotgunPanda", date:"someDate", status: Status.Discontinued, image: "/apple.png", gif: "/apple.gif", readme: "https://raw.githubusercontent.com/Thobla/ShotgunPanda/main/README.md"}],
     [2, {id:2, name:'JordenSindre', type:[PTypes.sparetime, PTypes.game, PTypes.gameJam], github: "404-Game-Not-Found/JordenSindreGJH2024", status: Status.Finished, image: "/fish.png", gif: "/fish.gif", readme: "https://raw.githubusercontent.com/Thobla/100Days500Hours/main/website/portfolio/public/JordenSindre.md"}],
-    [3, {id:3, name:'CorruptedChess', type:[PTypes.school, PTypes.game], github: "Thobla/Corrupt-Chess", status: Status.Finished, image: "/sircus.png", gif: "/sircus.gif", readme: "https://raw.githubusercontent.com/Thobla/Corrupt-Chess/main/README.md"}],
+    [3, {id:3, name:'CorruptedChess', type:[PTypes.school, PTypes.game], github: "Thobla/Corrupt-Chess", status: Status.Finished, image: "/sircus.png", gif: "/sircus.gif", readme: "https://raw.githubusercontent.com/Thobla/Corrupt-Chess/refs/heads/master/README.md"}],
     [4, {id:4, name:'Thorgal.no', type:[PTypes.sparetime], github: "https://github.com/Thobla/100Days500Hours/tree/main/website/portfolio", status: Status.inProgress}],
-    [5, {id:5, name:'Turbo', type:[PTypes.sparetime, PTypes.game, PTypes.gameJam], readme: "https://raw.githubusercontent.com/Thobla/100Days500Hours/main/website/portfolio/public/JordenSindre.md"}]
+    [5, {id:5, name:'Turbo', type:[PTypes.sparetime, PTypes.game, PTypes.gameJam], readme: "https://raw.githubusercontent.com/Thobla/100Days500Hours/main/website/portfolio/public/Turbo.md"}]
 ])
 
 export function ProjectContainer(props: { size: number, 
