@@ -12,8 +12,8 @@ const links = [
     href: '/projects',
     //icon: DocumentDuplicateIcon,
   },
-  { name: 'Hobbies', href: '/hobbies'},//, icon: UserGroupIcon },
-  { name: 'Ask Nils', href: '/ask_nils'}
+//  { name: 'Hobbies', href: '/hobbies'},//, icon: UserGroupIcon },
+//  { name: 'Ask Nils', href: '/ask_nils'}
 ];
 
 const refToTitle : {[key: string] : string} = { '/' : 'Thorgal.no',
@@ -31,9 +31,10 @@ const refToTitle : {[key: string] : string} = { '/' : 'Thorgal.no',
 
 const refToSubtitle : {[key: string]: string[]} = {
     '/' : [],
-    '/projects' : ['World Peace', 'Hammer Sand witch'],
-    '/hobbies' : ['Sleep', 'Unlimited Sleep', 'No Sleep'],
-    '/ask_nils' : ['Faq']
+    'projects' : []
+//    '/projects' : ['World Peace', 'Hammer Sand witch'],
+//    '/hobbies' : ['Sleep', 'Unlimited Sleep', 'No Sleep'],
+//    '/ask_nils' : ['Faq']
 }
 
 // Merge with refToSubtitle?
