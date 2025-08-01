@@ -1,8 +1,9 @@
 'use client'
 import { projectInfo, projects, ProjectInfo, ProjectContainer, PTypes } from './projectContainer';
 import { FilterContainer, initButtonStates } from './projectFilter';
-import { useState } from 'react';
-import GitHub from './gitHub';
+import React, { useState } from 'react';
+
+import dynamic from 'next/dynamic';
 
 export type ButtonFunction = (p1: number) => void;
 
@@ -21,8 +22,23 @@ export function initBoxVis(buttonStates: Map<number, boolean>, info: Map<number,
     return boxVis
 }
 
+function ProjectPage(props: {selected: number}){
+    const loadPage = ((pageName: string) => {
+        return dynamic(() => import(`./ProjectPages/${pageName}`).catch(() => {
+            return () => <h1> Error Loading Page </h1>
+        }), {
+            loading: () => <h1> Loading... </h1>
+        })
+    })
+    return (
+        <>
+            <div>{React.createElement(loadPage(projectInfo.get(props.selected)?.pageDir ?? "Default"))}</div>
+        </>
+    )
 
-export default function ClientPage(props: {markdowns: Map<number, string | TrustedHTML>}){
+}
+
+export default function ClientPage(){
     const [buttonStates, setButtonStates] = useState<Map<number, boolean>>(initButtonStates())
     const [boxVis, setBoxVis] = useState<Map<number, boolean>>(initBoxVis(buttonStates, projectInfo))
     const [selected, setSelected] = useState(-1);
@@ -35,9 +51,10 @@ export default function ClientPage(props: {markdowns: Map<number, string | Trust
         <>
         <FilterContainer bStates={buttonStates} bStatesFun={onClick} setBoxVis={setBoxVis} boxVis={boxVis}/>
         <ProjectContainer size={3} boxVis={boxVis} selected={selected} setSelected={setSelected}/>
-        <GitHub selected={selected} markdowns={props.markdowns}/>
+        <ProjectPage selected={selected}/>
         </>
     )
 }
+
 //<FilterButton name="Interactive button" function={onClick} state={clicked}/>
 // <ProjectBox id={1} state={clicked}/>

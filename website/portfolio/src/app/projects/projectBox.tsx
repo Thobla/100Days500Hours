@@ -41,6 +41,7 @@ export default function ProjectBox(props : {id: number,
                         'text-green-400': projectInfo?.get(props.id)?.status === Status.Finished,
                         'text-orange-400': projectInfo?.get(props.id)?.status === Status.inProgress,
                         'text-red-600': projectInfo?.get(props.id)?.status === Status.Discontinued,
+                        'text-red-900': projectInfo?.get(props.id)?.status === Status.Nalle,
                     })}hidden={!(props.selected === props.id)}>{projectInfo?.get(props.id)?.status ? (projectInfo?.get(props.id)?.status) : ""}</p>
                 </div>
             </div>
