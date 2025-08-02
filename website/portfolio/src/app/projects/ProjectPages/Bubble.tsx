@@ -1,6 +1,30 @@
+import Image from "next/image"
+import Link from "next/link"
 
-export default function Sindre(){
+export default function Bubble(){
     return (
-        <h1>I am Bubble</h1>
+        <div className = "flex flex-wrap flex-col items-center  w-full">
+            <div className = "flex flex-row object-contain flex-grow">
+            <h1 className="text-5xl">To the Moon and Back</h1>
+            </div>
+            <div className="mt-10 ml-10 mr-10">
+                <Image 
+                    className="float-right w-2/5 h-2/5 ml-2"
+                    src="/bubble.gif"
+                    width={100}
+                    height={100}
+                    alt="Bubble.gif"/>
+                <p className="pt-2">Love is in the air, but also in the sea and space. There is no love as 
+                unexpected as that of a bubble and the moon. Will you help the bubble Bob reach his one 
+                true love? If so, you should watch out for coral reefes, mermaids, and ?flying sharks???
+                <span className="block pt-2">
+                    Corrupted chess was a group project developed in regards to the class INF112-Introduction to system 
+                    development at the university of Bergen. Our group consisted of six people, each with our own main 
+                    responsibility---my responsibility was code and quality. The development was collectively managed, and 
+                    overall a great experience to be a part of.
+                </span>
+                </p>
+            </div>
+        </div>
     )
 }

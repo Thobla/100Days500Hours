@@ -23,14 +23,13 @@ export default function Sindre(){
                     width={100}
                     height={100}
                     alt="Sindre.gif"/>
-                <p className="pt-2">Ever since its beta release in the 6th century, chess has not received any major 
-                updated or patches. Atleast this was the case until april of 2022, when chess was re-released 
-                as a 2d-platformer under its new name "corrupted chess"
+                <p className="pt-2">Have you ever wanted to dig yourself down to the core of the earth? Well now you can---atleast virtually---
                 <span className="block pt-2">
-                    Corrupted chess was a group project developed in regards to the class INF112-Introduction to system 
-                    development at the university of Bergen. Our group consisted of six people, each with our own main 
-                    responsibility---my responsibility was code and quality. The development was collectively managed, and 
-                    overall a great experience to be a part of.
+                Jorden Sindre is a game developed in regards to Bakom Game Jam 2024, together with 
+                <Link href="https://github.com/Neelzee">Neelzee, </Link>
+                <Link href="https://github.com/MikalDr">MikalDr, </Link>
+                <Link href="https://github.com/Kaspetti">Kaspetti, and </Link>
+                <Link href="https://github.com/SeaDamm">SeaDamm</Link>
                 </span>
                 </p>
             </div>
