@@ -1,0 +1,132 @@
+
+chess.png
+size: 2048, 2048
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+ButtonHover
+  rotate: false
+  xy: 515, 1084
+  size: 238, 80
+  orig: 238, 80
+  offset: 0, 0
+  index: -1
+ButtonPress
+  rotate: false
+  xy: 1029, 1607
+  size: 238, 80
+  orig: 238, 80
+  offset: 0, 0
+  index: -1
+Sprite-0002 (1)
+  rotate: false
+  xy: 1, 177
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+boootooon (3)
+  rotate: false
+  xy: 1, 469
+  size: 238, 80
+  orig: 238, 80
+  offset: 0, 0
+  index: -1
+knob
+  rotate: false
+  xy: 515, 792
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+smollButton
+  rotate: false
+  xy: 515, 922
+  size: 158, 160
+  orig: 158, 160
+  offset: 0, 0
+  index: -1
+smollButtonHover
+  rotate: false
+  xy: 1029, 1445
+  size: 158, 160
+  orig: 158, 160
+  offset: 0, 0
+  index: -1
+smollButtonPress
+  rotate: false
+  xy: 1, 307
+  size: 158, 160
+  orig: 158, 160
+  offset: 0, 0
+  index: -1
+Checkbox_false
+  rotate: false
+  xy: 755, 1100
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+Checkbox_true
+  rotate: false
+  xy: 1269, 1623
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+akoljefhujiasdgfohuasdfgohj
+  rotate: false
+  xy: 1537, 1725
+  size: 238, 48
+  orig: 238, 48
+  offset: 0, 0
+  index: -1
+selection
+  rotate: false
+  xy: 241, 533
+  size: 119, 16
+  orig: 119, 16
+  offset: 0, 0
+  index: -1
+Goblin
+  rotate: false
+  xy: 1, 551
+  size: 506, 194
+  orig: 506, 194
+  offset: 0, 0
+  index: -1
+Goblin-big_0
+  rotate: false
+  xy: 1, 1261
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Goblin-big_1
+  rotate: false
+  xy: 1, 747
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Goblin-big_2
+  rotate: false
+  xy: 515, 1261
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+PPF
+  rotate: false
+  xy: 515, 1166
+  size: 506, 93
+  orig: 506, 93
+  offset: 0, 0
+  index: -1
+momcake
+  rotate: false
+  xy: 1029, 1689
+  size: 506, 84
+  orig: 506, 84
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,133 @@
+{
+com.badlogic.gdx.graphics.g2d.BitmapFont: {
+	Goblin: {
+		file: Goblin.fnt
+	}
+	Goblin-big: {
+		file: Goblin-big.fnt
+	}
+	momcake: {
+		file: momcake.fnt
+	}
+	PPF: {
+		file: PPF.fnt
+	}
+}
+com.badlogic.gdx.graphics.Color: {
+	black: {
+		r: 0
+		g: 0
+		b: 0
+		a: 1
+	}
+	RGBA_0_0_0_255: {
+		r: 0.113995224
+		g: 0.12333334
+		b: 0.0550889
+		a: 1
+	}
+	RGBA_44_22_42_255: {
+		r: 0.32333332
+		g: 0.108855546
+		b: 0.3068683
+		a: 1
+	}
+	RGBA_55_56_50_255: {
+		r: 0.21923798
+		g: 0.22
+		b: 0.19946666
+		a: 1
+	}
+	white: {
+		r: 1
+		g: 1
+		b: 1
+		a: 1
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.CheckBox$CheckBoxStyle: {
+	default: {
+		checkboxOn: Checkbox_true
+		checkboxOff: Checkbox_false
+		font: Goblin
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
+	default: {
+		font: Goblin
+		fontColor: RGBA_0_0_0_255
+	}
+	title-dark: {
+		font: Goblin-big
+		fontColor: RGBA_44_22_42_255
+	}
+	title-light: {
+		font: Goblin-big
+		fontColor: white
+	}
+	default-light: {
+		font: Goblin
+		fontColor: white
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.List$ListStyle: {
+	default: {
+		font: momcake
+		fontColorSelected: black
+		fontColorUnselected: black
+		selection: selection
+		background: akoljefhujiasdgfohuasdfgohj
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.ScrollPane$ScrollPaneStyle: {
+	default: {
+		background: akoljefhujiasdgfohuasdfgohj
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.SelectBox$SelectBoxStyle: {
+	default: {
+		font: momcake
+		fontColor: black
+		background: akoljefhujiasdgfohuasdfgohj
+		scrollStyle: default
+		listStyle: default
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Slider$SliderStyle: {
+	default-horizontal: {
+		background: Sprite-0002 (1)
+		knob: knob
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
+	default: {
+		font: Goblin
+		fontColor: RGBA_0_0_0_255
+		up: boootooon (3)
+		down: ButtonPress
+		over: ButtonHover
+	}
+	small: {
+		font: Goblin
+		fontColor: black
+		up: smollButton
+		down: smollButtonPress
+		over: smollButtonHover
+		pressedOffsetX: -4
+		unpressedOffsetX: -4
+		checkedOffsetX: -4
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle: {
+	default: {
+		font: Goblin
+		fontColor: black
+		background: akoljefhujiasdgfohuasdfgohj
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextTooltip$TextTooltipStyle: {
+	default: {
+		label: default
+	}
+}
+}

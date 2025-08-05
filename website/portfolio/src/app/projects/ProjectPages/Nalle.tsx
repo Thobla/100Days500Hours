@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import Downloads from "./Components/Downloads"
 
 export default function Nalle(){
     return (
@@ -7,6 +8,7 @@ export default function Nalle(){
             <div className = "flex flex-row object-contain flex-grow">
             <h1 className="text-5xl">Turbo Nalle</h1>
             </div>
+            <Downloads projectId={5}/>
             <div className="mt-10 ml-10 mr-10">
                 <Image 
                     className="float-right w-2/5 h-2/5 ml-2"

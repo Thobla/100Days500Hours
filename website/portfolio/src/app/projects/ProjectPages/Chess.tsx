@@ -1,16 +1,17 @@
 import Image from "next/image"
-import Link from "next/link"
+import Downloads from "./Components/Downloads"
 
-export default function Sindre(){
+export default function Chess(){
     return (
         <div className = "flex flex-wrap flex-col items-center  w-full">
             <div className = "flex flex-row object-contain flex-grow h-30">
                 <Image src="/chessLogo.png"
                 width={1000} height={1000}
-                alt="Jorden"
+                alt="Chess"
                 className="object-contain w-full h-full"
                 />
             </div>
+            <Downloads projectId={3}/>
             <div className="mt-10 ml-10 mr-10">
                 <Image 
                     className="float-right w-2/5 h-2/5 ml-2"

@@ -1,5 +1,5 @@
 import Image from "next/image"
-import Link from "next/link"
+import Downloads from "./Components/Downloads"
 
 export default function Bubble(){
     return (
@@ -7,6 +7,7 @@ export default function Bubble(){
             <div className = "flex flex-row object-contain flex-grow">
             <h1 className="text-5xl">To the Moon and Back</h1>
             </div>
+            <Downloads projectId={1}/>
             <div className="mt-10 ml-10 mr-10">
                 <Image 
                     className="float-right w-2/5 h-2/5 ml-2"

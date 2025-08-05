@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import Downloads from "./Components/Downloads"
 
 export default function Sindre(){
     return (
@@ -16,6 +17,7 @@ export default function Sindre(){
                 className="object-contain w-full h-full"
                 />
             </div>
+            <Downloads projectId={2}/>
             <div className="mt-10 ml-10 mr-10">
                 <Image 
                     className="float-right w-2/5 h-2/5 ml-2"
