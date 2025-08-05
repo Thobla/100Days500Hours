@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import Downloads from "./Components/Downloads"
+import Images from "./Components/Images"
 
 export default function Nalle(){
     return (
@@ -9,13 +10,8 @@ export default function Nalle(){
             <h1 className="text-5xl">Turbo Nalle</h1>
             </div>
             <Downloads projectId={5}/>
-            <div className="mt-10 ml-10 mr-10">
-                <Image 
-                    className="float-right w-2/5 h-2/5 ml-2"
-                    src="/nalle.gif"
-                    width={100}
-                    height={100}
-                    alt="Nalle.gif"/>
+            <div className="ml-10 mr-10">
+            <Images src="/nalle.gif" alt="Hell incarnate"/>
                 <p className="pt-2">Have you ever experienced the loss of a loved one, a gunshot to your chest, 
                     or losing all your equity in crypto after buying into the hype? Well, none of that pain even 
                 comes close to playing Turbo Nalle...

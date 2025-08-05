@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Downloads from "./Components/Downloads"
+import Images from "./Components/Images"
 
 export default function Bubble(){
     return (
@@ -8,13 +9,8 @@ export default function Bubble(){
             <h1 className="text-5xl">To the Moon and Back</h1>
             </div>
             <Downloads projectId={1}/>
-            <div className="mt-10 ml-10 mr-10">
-                <Image 
-                    className="float-right w-2/5 h-2/5 ml-2"
-                    src="/bubble.gif"
-                    width={100}
-                    height={100}
-                    alt="Bubble.gif"/>
+            <div className="ml-10 mr-10">
+                <Images src="/bubble.gif" alt="gif of bubble game"/>
                 <p className="pt-2">Love is in the air, but also in the sea and space. There is no love as 
                 unexpected as that of a bubble and the moon. Will you help the bubble Bob reach his one 
                 true love? If so, you should watch out for coral reefes, mermaids, and ?flying sharks???

@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import Downloads from "./Components/Downloads"
+import Images from "./Components/Images"
 
 export default function Sindre(){
     return (
@@ -18,13 +19,8 @@ export default function Sindre(){
                 />
             </div>
             <Downloads projectId={2}/>
-            <div className="mt-10 ml-10 mr-10">
-                <Image 
-                    className="float-right w-2/5 h-2/5 ml-2"
-                    src="/sindre.gif"
-                    width={100}
-                    height={100}
-                    alt="Sindre.gif"/>
+            <div className="ml-10 mr-10">
+            <Images src="/sindre.gif" alt="Sindre digging a nice hole"/>
                 <p className="pt-2">Have you ever wanted to dig yourself down to the core of the earth? Well now you can---atleast virtually---
                 <span className="block pt-2">
                 Jorden Sindre is a game developed in regards to Bakom Game Jam 2024, together with 
