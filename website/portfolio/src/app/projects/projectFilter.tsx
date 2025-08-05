@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { ButtonFunction, initBoxVis} from './clientManager';
-import { projectInfo, PTypes } from './projectContainer';
+import { projectInfo } from './projectContainer';
 
 enum StartState{
     Off = 0,
@@ -25,7 +25,7 @@ const nameTypeTuples: ButtonTuple[] = [
 export function initButtonStates(){
     const bStates: Map<number, boolean> = new Map<number, boolean>();
     nameTypeTuples.forEach((tuple) => {
-        const [_, type, state] = tuple;
+        const [, type, state] = tuple;
         bStates.set(type, state===StartState.On)
     })
     return bStates

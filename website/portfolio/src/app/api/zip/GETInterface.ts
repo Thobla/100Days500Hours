@@ -11,12 +11,12 @@ export async function GETInterface(projectId: number,
     headers.append('Content-Type', 'application/zip');
 
     const zip = new AdmZip();
-    let paths = projectInfo.get(projectId)?.zipPath;
-    let index = paths?.map(tuple => tuple[0]).indexOf(dType);
+    const paths = projectInfo.get(projectId)?.zipPath;
+    const index = paths?.map(tuple => tuple[0]).indexOf(dType);
     if (index===undefined || !paths || index==-1){
         return new Response(null);
     }
-    let p = paths.at(index);
+    const p = paths.at(index);
     if (!p){
         return new Response(null);
     }

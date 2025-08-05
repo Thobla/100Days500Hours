@@ -1,5 +1,3 @@
-import Image from "next/image"
-import Link from "next/link"
 import Downloads from "./Components/Downloads"
 import Images from "./Components/Images"
 
@@ -16,7 +14,7 @@ export default function Nalle(){
                     or losing all your equity in crypto after buying into the hype? Well, none of that pain even 
                 comes close to playing Turbo Nalle...
                 <span className="block pt-2">
-                    This project was a "contribution" to Bakom gamejam in 2022, and was the first gamejam that I---sadly---participated
+                    This project was a &quot;contribution&quot; to Bakom gamejam in 2022, and was the first gamejam that I---sadly---participated
                     in. This was done as a group project together with four friends, who---due to potential legal reprocussions---shall 
                     remain anonymous. It truly is a wonder how we managed to stay friends after its release...
                 </span>

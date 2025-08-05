@@ -1,5 +1,5 @@
 'use client'
-import { projectInfo, projects, ProjectInfo, ProjectContainer, PTypes } from './projectContainer';
+import { projectInfo, projects, ProjectInfo, ProjectContainer } from './projectContainer';
 import { FilterContainer, initButtonStates } from './projectFilter';
 import React, { useState } from 'react';
 
@@ -23,18 +23,21 @@ export function initBoxVis(buttonStates: Map<number, boolean>, info: Map<number,
 }
 
 function ProjectPage(props: {selected: number}){
-    const loadPage = ((pageName: string) => {
-        return dynamic(() => import(`./ProjectPages/${pageName}`).catch(() => {
-            return () => <h1> Error Loading Page </h1>
+    const loadPage = (pageName: string) => {
+        const Comp = dynamic(() => import(`./ProjectPages/${pageName}`).catch(() => {
+            const ErrorComp = () => <h1> Error Loading Page </h1>;
+            ErrorComp.displayName = "ErrorComponent";
+            return ErrorComp
         }), {
             loading: () => <h1> Loading... </h1>
         })
-    })
-    return (
-        <>
-            <div>{React.createElement(loadPage(projectInfo.get(props.selected)?.pageDir ?? "Default"))}</div>
-        </>
-    )
+
+        Comp.displayName= `DynamicPage${pageName}`
+        return Comp;
+    }
+    const PageComponent = loadPage(projectInfo.get(props.selected)?.pageDir ?? "Default");
+    PageComponent.displayName = `DynamicPage${projectInfo.get(props.selected)?.pageDir ?? "Default"}`
+    return <PageComponent/>
 
 }
 

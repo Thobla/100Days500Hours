@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Downloads from "./Components/Downloads"
 import Images from "./Components/Images"
 

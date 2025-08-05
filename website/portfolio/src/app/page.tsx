@@ -3,7 +3,6 @@ import Link from 'next/link';
 
 
 function Parimg() {
-    const mytest = "I am Thorgal Blanco";
     return (
         <div className = "flex w-1/1 align-center">
             <div className="flex-auto w-3/5">

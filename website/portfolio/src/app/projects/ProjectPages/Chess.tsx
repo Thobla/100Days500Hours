@@ -17,7 +17,7 @@ export default function Chess(){
             <Images src="/chess.gif" alt="Gif of chessgame"/>
                 <p className="pt-2">Ever since its beta release in the 6th century, chess has not received any major 
                 updated or patches. Atleast this was the case until april of 2022, when chess was re-released 
-                as a 2d-platformer under its new name "corrupted chess"
+                as a 2d-platformer under its new name corrupted chess
                 <span className="block pt-2">
                     Corrupted chess was a group project developed in regards to the class INF112-Introduction to system 
                     development at the university of Bergen. Our group consisted of six people, each with our own main 
