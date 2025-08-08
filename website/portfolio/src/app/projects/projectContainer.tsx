@@ -85,6 +85,8 @@ export const projectInfo : Map<number, ProjectInfo> = new Map<number, ProjectInf
         type:[PTypes.all, PTypes.sparetime],
         github: "Thobla/100Days500Hours/website/portfolio",
         pageDir: "Thorgal",
+        image: "/avatar.png",
+        gif: "/me.png",
         status: Status.inProgress}],
     //[4, {id:4, name:'Thorgal.no', type:[PTypes.all, PTypes.sparetime], pageDir: "https://github.com/Thobla/100Days500Hours/tree/main/website/portfolio", status: Status.inProgress}],
     [5, {id:5,

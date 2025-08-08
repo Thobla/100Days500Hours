@@ -35,7 +35,7 @@ function ProjectPage(props: {selected: number}){
         Comp.displayName= `DynamicPage${pageName}`
         return Comp;
     }
-    const PageComponent = loadPage(projectInfo.get(props.selected)?.pageDir ?? "Default");
+    const PageComponent = props.selected != -1 ? loadPage(projectInfo.get(props.selected)?.pageDir ?? "Default") : loadPage("Empty");
     PageComponent.displayName = `DynamicPage${projectInfo.get(props.selected)?.pageDir ?? "Default"}`
     return <PageComponent/>
 
