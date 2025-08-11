@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { ButtonFunction, initBoxVis} from './clientManager';
-import { projectInfo } from './projectContainer';
+import { projectInfo } from './projectInfo';
 
 enum StartState{
     Off = 0,

@@ -1,5 +1,6 @@
 'use client'
-import { projectInfo, projects, ProjectInfo, ProjectContainer } from './projectContainer';
+import { projectInfo, projects, ProjectInfo } from './projectInfo';
+import { ProjectContainer } from './projectContainer';
 import { FilterContainer, initButtonStates } from './projectFilter';
 import React, { useState } from 'react';
 

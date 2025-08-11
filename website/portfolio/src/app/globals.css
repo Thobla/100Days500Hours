@@ -24,3 +24,18 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* styles/globals.css or a specific CSS module */
+.hide-scrollbar {
+  overflow: auto; /* Allow scrolling */
+}
+
+/* Hide scrollbar for WebKit browsers */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
+
+/* Hide scrollbar in Firefox */
+.hide-scrollbar {
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}

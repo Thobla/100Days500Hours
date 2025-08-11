@@ -1,4 +1,4 @@
-import { projectInfo, Downloadable } from "../../projectContainer"
+import { projectInfo, Downloadable } from "../../projectInfo"
 import { DownloadButton } from "@/app/components/DownloadButton"
 export default function Downloads(props: {projectId: number}){
         return (

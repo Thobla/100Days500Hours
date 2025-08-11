@@ -37,7 +37,7 @@ export default function RootLayout({
         <div className='w-full flex-none md:w-64'>
             <SideNav/>
         </div>
-        <div className="flex-grow md:overflow-y-auto">{children}</div>
+        <div className="bg-yellow-50 text-black flex-grow md:overflow-y-auto">{children}</div>
         </div>
       </body>
     </html>

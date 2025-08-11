@@ -1,0 +1,100 @@
+export enum PTypes {
+    all = 1,
+    school = 2,
+    sparetime = 3,
+    game = 4,
+    gameJam = 5,
+    nalle = 6 }
+
+export interface ProjectType {
+    school: boolean,
+    sparetime: boolean,
+    game: boolean,
+    gameJam: boolean
+}
+
+export enum downloadType {
+    Linux = "Linux",
+    Windows = "Windows",
+    Java = "Jar"
+}
+
+export type Downloadable = [type: downloadType, path: string]
+
+export enum Status {
+    inProgress = "In Progress",
+    Discontinued = "Discontinued",
+    Finished = "Finished",
+    Nalle = "@f#!u¤*@c$¤*k&"
+}
+
+export interface ProjectInfo {
+    id: number,
+    name: string,
+    type: PTypes[],
+    date?: string,
+    github?: string,
+    pageDir?: string,
+    status?: Status,
+    image?: string,
+    gif?: string,
+    zipPath?: Downloadable[]
+}
+
+
+export const projects : Array<number> = [1, 2, 3, 4, 5];
+
+
+export const projectInfo : Map<number, ProjectInfo> = new Map<number, ProjectInfo>([
+    [1, {id:1,
+        name:'To the Moon and Back',
+        type:[PTypes.all, PTypes.sparetime, PTypes.game, PTypes.gameJam],
+        github: "Neelzee/ToTheMoonAndBack",
+        pageDir:"Bubble", date:"27.01.2025",
+        status: Status.Finished,
+        image: "/bubble.png",
+        gif: "/bubble.gif", 
+        zipPath: [[downloadType.Windows, "/Bubble/Windows"], [downloadType.Linux, "/Bubble/Linux"]]}],
+    //[1, {id:1, name:'To the Moon and Back', type:[PTypes.all, PTypes.sparetime, PTypes.game, PTypes.gameJam], pageDir:"Neelzee/ToTheMoonAndBack", date:"27.01.2025", status: Status.Finished, image: "/bubble.png", gif: "/bubble.gif", readme: "https://raw.githubusercontent.com/Thobla/ShotgunPanda/main/README.md"}],
+    [2, {id:2,
+        name:'JordenSindre',
+        type:[PTypes.all, PTypes.sparetime,
+            PTypes.game, PTypes.gameJam],
+            github: "404-Game-Not-Found/JordenSindreGJH2024",
+            pageDir: "Sindre",
+            status: Status.Finished,
+            image: "/sindre.png",
+            gif: "/sindre.gif",
+            zipPath: [[downloadType.Windows, "/Sindre/Windows"], [downloadType.Linux, "/Sindre/Linux"]]}],
+    //[2, {id:2, name:'JordenSindre', type:[PTypes.all, PTypes.sparetime, PTypes.game, PTypes.gameJam], pageDir: "404-Game-Not-Found/JordenSindreGJH2024", status: Status.Finished, image: "/sindre.png", gif: "/sindre.gif", readme: "https://raw.githubusercontent.com/Thobla/100Days500Hours/main/website/portfolio/public/JordenSindre.md"}],
+    [3, {id:3,
+        name:'CorruptedChess',
+        type:[PTypes.all, PTypes.school, PTypes.game],
+        github: "Thobla/Corrupt-Chess",
+        pageDir: "Chess",
+        status: Status.Finished,
+        image: "/chess.png",
+        gif: "/chess.gif",
+        zipPath: [[downloadType.Java, "/Chess/Java"]]}],
+    //[3, {id:3, name:'CorruptedChess', type:[PTypes.all, PTypes.school, PTypes.game], pageDir: "Thobla/Corrupt-Chess", status: Status.Finished, image: "/chess.png", gif: "/chess.gif", readme: "https://raw.githubusercontent.com/Thobla/Corrupt-Chess/refs/heads/master/README.md"}],
+    [4, {id:4,
+        name:'Thorgal.no',
+        type:[PTypes.all, PTypes.sparetime],
+        github: "Thobla/100Days500Hours/website/portfolio",
+        pageDir: "Thorgal",
+        image: "/avatar.png",
+        gif: "/me.png",
+        status: Status.inProgress}],
+    //[4, {id:4, name:'Thorgal.no', type:[PTypes.all, PTypes.sparetime], pageDir: "https://github.com/Thobla/100Days500Hours/tree/main/website/portfolio", status: Status.inProgress}],
+    [5, {id:5,
+        name:'Turbonalle',
+        type:[PTypes.nalle],
+        pageDir: "Nalle",
+        status: Status.Nalle,
+        image: "/nalle.png",
+        gif: "/nalle.gif",
+        zipPath: [[downloadType.Windows, "/Nalle/Windows"]]}]
+    //[5, {id:5, name:'Turbonalle', type:[PTypes.nalle], image: "/nalle.png", gif: "/nalle.gif", readme: "https://raw.pageDirusercontent.com/Thobla/100Days500Hours/main/website/portfolio/public/Turbo.md"}]
+])
+
+

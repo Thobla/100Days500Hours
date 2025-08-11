@@ -14,10 +14,10 @@ export default function Bubble(){
                 unexpected as that of a bubble and the moon. Will you help the bubble Bob reach his one 
                 true love? If so, you should watch out for coral reefes, mermaids, and ?flying sharks???
                 <span className="block pt-2">
-                    Corrupted chess was a group project developed in regards to the class INF112-Introduction to system 
-                    development at the university of Bergen. Our group consisted of six people, each with our own main 
-                    responsibility---my responsibility was code and quality. The development was collectively managed, and 
-                    overall a great experience to be a part of.
+                    To the Moon and Back was a game developed in regards to the global game jam of 2025, hosted at 
+                    <a href="https://www.bakom.no/"> Bakom</a>. We were a diverse group of five, with three programmers
+                    (me included), one power-point artist, and one musician. Out of the five game jams I have competed 
+                    in, this is likely the most polished product (as it actually has a game-loop).
                 </span>
                 </p>
             </div>

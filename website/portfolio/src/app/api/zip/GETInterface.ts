@@ -1,6 +1,6 @@
 import path from "path";
 import AdmZip from "adm-zip";
-import { downloadType, projectInfo } from "@/app/projects/projectContainer";
+import { downloadType, projectInfo } from "@/app/projects/projectInfo";
 
 export async function GETInterface(projectId: number,
                                    dType: downloadType){

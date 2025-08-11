@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image';
-import { projectInfo, Status } from './projectContainer';
+import { projectInfo, Status } from './projectInfo';
 import clsx from 'clsx'
 
 
@@ -21,7 +21,7 @@ export default function ProjectBox(props : {id: number,
         <div id={props.id.toString()}
         hidden={false}
         onClick={onclick}
-        className={clsx("group flex relative flex-col items-center w-24 h-24 m-1 aspect-1/1 bg-black transition-transform duration-300 ease-in-out hover:scale-170 hover:z-10 md:m-2 md:w-48 md:h-48", 
+        className={clsx("snap-center group flex relative flex-col items-center w-24 h-24 m-1 aspect-1/1 bg-black transition-transform duration-300 ease-in-out hover:scale-170 hover:z-10 md:m-2 md:w-48 md:h-48", 
                         {'hidden': !props.boxVis.get(props.id),},
                         )}>
             <div className='w-24 h-18 md:w-48 md:h-36'>

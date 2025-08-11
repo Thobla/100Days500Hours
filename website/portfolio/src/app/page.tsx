@@ -9,7 +9,7 @@ function Parimg() {
                 <p className=" ml-10 mt-20 text-4xl">I am Thorgal,
                 <span className="block ml-6 text-blue-500 text-3xl">Developer and Nerd</span>
                 <span className="block mt-10 text-2xl">Feel free to check out some of my personal projects in 
-                the <Link className="text-blue-500" href="/Projects">Projects</Link> directory.
+                the <Link className="text-blue-500" href="/projects">Projects</Link> directory.
                 </span>
                 </p>
             </div>
