@@ -23,6 +23,8 @@ export function initBoxVis(buttonStates: Map<number, boolean>, info: Map<number,
     return boxVis
 }
 
+
+
 function ProjectPage(props: {selected: number}){
     const loadPage = (pageName: string) => {
         const Comp = dynamic(() => import(`./ProjectPages/${pageName}`).catch(() => {
@@ -36,10 +38,10 @@ function ProjectPage(props: {selected: number}){
         Comp.displayName= `DynamicPage${pageName}`
         return Comp;
     }
+
     const PageComponent = props.selected != -1 ? loadPage(projectInfo.get(props.selected)?.pageDir ?? "Default") : loadPage("Empty");
     PageComponent.displayName = `DynamicPage${projectInfo.get(props.selected)?.pageDir ?? "Default"}`
     return <PageComponent/>
-
 }
 
 export default function ClientPage(){

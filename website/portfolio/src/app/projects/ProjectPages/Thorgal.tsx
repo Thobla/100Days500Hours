@@ -1,6 +1,6 @@
 import Images from "./Components/Images"
 
-export default function Sindre(){
+export default function Thorgal(){
     return (
         <div className = "flex flex-wrap flex-col items-center  w-full">
             <div className="ml-10 mr-10">

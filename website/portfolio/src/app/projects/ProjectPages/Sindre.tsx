@@ -19,6 +19,7 @@ export default function Sindre(){
                 />
             </div>
             <Downloads projectId={2}/>
+
             <div className="ml-10 mr-10">
             <Images src="/sindre.gif" alt="Sindre digging a nice hole"/>
                 <p className="pt-2">Have you ever wanted to dig yourself down to the core of the earth? Well now you can---atleast virtually---
