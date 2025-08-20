@@ -35,7 +35,7 @@ export function ProjectContainer(props: { size: number,
     return(
         <div className="flex flex-column grow justify-center w-full">
             <SlideButton containerRef={containerRef} shiftValue={-0.4}/>
-            <div className="flex flex-row hide-scrollbar overscroll-contain snap-x snap-mandatory overflow-x-auto overflow-y-hidden content-start max-w-1/1 p-15" 
+            <div className="flex flex-row hide-scrollbar snap-x snap-mandatory overflow-hidden content-start max-w-1/1 p-15" 
             ref={containerRef}>
                 {projects.map((p_id: number) => {return(
                     <ProjectBox id={p_id} key={p_id} boxVis={props.boxVis} 
